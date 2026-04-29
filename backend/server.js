@@ -10,7 +10,9 @@ const app = express();
 const PORT = 3001;
 
 // Allow React frontend to talk to this server
-app.use(cors());
+app.use(cors({
+  origin: ["https://proxim-sandy.vercel.app", "http://localhost:5173"]
+}));
 // Let Express read JSON from requests
 app.use(express.json());
 
