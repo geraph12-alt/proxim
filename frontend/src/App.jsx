@@ -211,7 +211,7 @@ async function handleSearch(serviceValue) {
   setParsed(null);
 
   try {
-    const res = await fetch("http://localhost:3001/search", {
+    const res = await fetch("https://proxim-production-e113.up.railway.app", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ query: serviceValue + " in " + (userLocation ? userLocation.address : "madrid") }),
